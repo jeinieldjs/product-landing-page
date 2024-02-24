@@ -1,0 +1,580 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+     font-family: 'Cabin';
+     font-size: 16px;
+     margin: auto;
+     background-color: #f5f5f5;
+}
+
+#page-wrapper{
+    width: 100%;
+}
+
+/*nav bar*/
+
+#nav-bar {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    background-color:#f5f5f5;
+    padding: 10px;
+    margin:auto;
+    font-size: 0.7rem;
+  
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    padding: 0 10px;
+}
+
+.nav-links a:hover{
+  color: #c92e36;
+}
+
+
+#logo-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+#header-img {
+    width: 40px;
+    object-fit: contain;
+}
+
+/*banner*/
+
+#intro {
+    width: 100%;
+    height: 100vh;
+    background-image:url("https://hips.hearstapps.com/hmg-prod/images/glossier-you-review-1673887116.png?crop=1.00xw:1.00xh;0,0&resize=1200:*");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 5%;
+}
+
+
+#intro-text h1{
+    font-weight: 700;
+    font-size: 2rem;
+   
+}
+
+#intro-text h3{
+    font-size: 1rem;
+    padding-bottom: 10px;
+    font-weight: 400;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+#shop-now{
+  font-size: 0.8rem;
+  padding:10px;
+  background-color:#ea1520af;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+#shop-now:hover{
+  background-color:#f4bfbf;
+  color: black;
+}
+
+
+/*about*/
+
+#about{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+#about-text{
+  width: 100%;
+  padding: 20px;
+}
+#about-text h1{
+  text-transform: uppercase;
+  opacity: 0.8;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 10px;
+}
+#about-text p{
+  font-family: 'Poppins';
+  font-size: 0.8rem;
+  text-align: justify;
+  font-weight: 400;
+  line-height: 1rem;
+}
+.keywords{
+  color: #c92e36;
+  font-weight: 700;
+}
+
+#about-img img{
+ height: 300px;
+ overflow: hidden;
+}
+/*others*/
+#video {
+    width: 100%;
+}
+/*products*/
+
+#products{
+  background-color: #f5f5f5;
+}
+#products h1 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+.wrapper{
+    padding: 10px 10%;
+}
+#card-area{
+    padding: 10px 0;
+}
+.box-area{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 20px;
+}
+.box {
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+}
+.box img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.overlay {
+	width: 100%;
+	height: 0;
+	background: linear-gradient(transparent,#c92e36 95%);
+	border-radius: 10px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	font-size: 1rem;
+	transition: height 0.5s;
+  font-family: 'Lato';
+  color:  #f5f5f5;
+}
+.overlay h3 {
+	font-weight:700;
+	margin-bottom: 5px;
+	margin-top: 80%;
+	font-size: 1.2rem;
+	letter-spacing: 2px;
+}
+.overlay p {
+	font-weight:500;
+	font-size: 0.7rem;
+	letter-spacing: 2px;
+  text-align:center;
+  line-height: 0.7rem;
+  opacity: 0.8;
+}
+.overlay a {
+	margin-top: 10px;
+	color: #c92e36;
+	text-decoration: none;
+	font-size: 0.9rem;
+	background-color: #f5f5f5;
+	border-radius: 50px;
+	text-align: center;
+	padding: 5px 15px;
+}
+.overlay a:hover {
+  background: linear-gradient(transparent,#c92e36 95%);
+  border: 2px solid #f5f5f5;
+  color:#f5f5f5;
+}
+.box:hover img{
+    transform: scale(1.1);
+}
+.box:hover .overlay{
+    height: 100%;
+}
+
+/*contact info*/
+
+#contact {
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  background-color: #c92e36;
+  padding-bottom: 20px;
+  color: #f5f5f5;
+}
+
+#form-container{
+  width: 100%;
+  padding: 10px;
+}
+
+#form {
+  background-color: #c92e36;
+  padding: 20px;
+  font-weight: 500;
+}
+#form h2{
+  padding-bottom: 20px;
+  text-align: center;
+}
+.form-inputs, textarea {
+  background-color: #c92e36;
+  border: none;
+  border-bottom: 1px solid #f5f5f5;
+  padding:5px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+input[type="text"],input[type="email"], textarea {
+  color: #f5f5f5;
+  font-family: 'Poppins';
+  text-transform: uppercase;
+}
+.form-inputs::placeholder, textarea::placeholder {
+  color: #f5f5f5;
+  text-transform: none;
+  font-family: 'Poppins';
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+.form-inputs:focus {
+  outline: none; 
+  border: 2px solid #f5f5f5; 
+}
+
+textarea:focus {
+  outline: none; 
+  border: 2px solid #f5f5f5; 
+}
+ 
+#submit {
+  border: 2px solid #f5f5f5;
+  padding: 10px;
+  border-radius: 10px;
+  text-transform: uppercase; 
+  color: #f5f5f5;
+  background-color:#c92e36;
+}
+
+#submit:hover{
+ background-color:#f5dadf;
+ color: black;
+}
+
+#headquarters{
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.slideshow-container {
+  width: 90%;
+  position: relative;
+  margin: auto;
+  padding-top: 20px;
+}
+.slideshow-container img{
+  border-radius: 25px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #f5f5f5;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+#headquarters h1{
+  padding-top: 10px;
+  font-size: 1rem;
+}
+
+.scroll-up {
+  position: fixed;
+  right: 1%;
+  bottom: 4%;
+  cursor: pointer;
+}
+.arrow-up {
+  width: 2rem;
+  height: 2rem;
+  background-color: #c92e36;
+  border:none;
+  border-radius: 50%;
+}
+.footer{
+  text-align: center;
+  font-size: 0.5rem;
+  font-weight: 600;
+  background-color: #f5f5f5;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+/*media queries*/
+
+@media all and (min-width: 426px){
+  .nav-links a {
+    font-size: 1.5em;
+}
+#intro-text h1{
+  font-size: 2.5rem;
+}
+#intro-text h3{
+  font-size: 1.5rem;
+}
+
+#about-text h1{
+  font-size: 2rem;
+}
+#about-text p{
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 20px;
+}
+
+#about-img img{
+ height:500px;
+ overflow: hidden;
+}
+
+}
+.form-inputs::placeholder, textarea::placeholder{
+  font-size: 0.9rem;
+}
+
+@media only screen and (min-width: 768px){
+  #nav-bar {
+    flex-direction: row;
+    }
+
+  #intro {
+    background-position: center;
+  }
+  #about {
+    flex-direction: row;
+    height: 100vh;
+    padding:10px;
+    width: 100%;
+  }
+  #about-text{
+    padding-left: 30px;
+    width: 65%;
+    order: 1;
+    
+  }
+  #about h1{
+    text-align: center;
+
+    font-size: 1.5rem;
+   
+  }
+  #about p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+  }
+  #about-img {
+    width: 35%;
+    order: 2;
+  }
+  #about-img img{
+    height: auto;
+    width: 100%;
+  }
+  #contact{
+    flex-direction: row;
+  }
+  #submit{
+    width: 100%;
+  }
+
+  .footer{
+    font-size: 1rem;
+  }
+
+@media only screen and (min-width: 1024px){
+  #about h1{
+    font-size: 2rem;
+  }
+  #about p{
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+  #about-img img {
+    height: 80vh;
+    overflow: hidden;
+  }
+  #video-container {
+    background-color: #c92e36;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #video {
+    width: 100%;
+    max-height: 100%;
+    border-radius:25px;
+  }
+  .box-area{
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+}
+
+@media only screen and (min-width: 1440px){
+ 
+#intro-text h1{
+    font-size: 5rem;
+   
+}
+
+#intro-text h3{
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#about{
+  height: 100vh;
+  width:100%;
+  text-align: left;
+}
+#about-img {
+  width:50%;
+  overflow: hidden;
+}
+#about-img img{
+  height: 100%;
+  width: auto;
+}
+#about h1{
+  font-size: 3rem;
+}
+#about p{
+  font-size: 1.8rem;
+  line-height: 2rem;
+  text-align: justify;
+  padding: 3%;
+  
+}
+#products{
+  padding: 40px;
+}
+#products h1{
+  font-size: 3rem;;
+}
+.box-area{
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  padding: 20px 100px 100px 100px;
+  margin-top:0;
+}
+.overlay h3{
+  font-size:2rem;
+}
+
+.overlay p{
+  font-size:1.2rem;
+  line-height: 1.2rem
+}
+.overlay a{
+  font-size:1.5rem;
+}
+#contact {
+  width: 100%;
+  height:100vh;
+}
+#form-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+#form {
+  padding: 10%;
+  font-size: 2rem;
+  height: 100%;
+
+#form h2{
+  font-size: 3rem;
+}
+
+.form-inputs::placeholder, textarea::placeholder, #address-container h1, #submit {
+  font-size: 1.2rem;
+}
+}
+}
+}
